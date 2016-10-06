@@ -1,8 +1,146 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LVf-gV-sZs">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Planets-->
+        <scene sceneID="wMT-HW-4pu">
+            <objects>
+                <tableViewController id="v6q-Va-59T" customClass="PlanetTableViewController" customModule="TableViewFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="168" sectionHeaderHeight="28" sectionFooterHeight="28" id="czc-Nv-gTX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetCell" rowHeight="168" id="osF-uL-Vyt" customClass="PlanetTableViewCell" customModule="TableViewFinal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="168"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="osF-uL-Vyt" id="Y1D-uu-ewn">
+                                    <frame key="frameInset" width="375" height="167"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="35" translatesAutoresizingMaskIntoConstraints="NO" id="ZBW-TX-dFH">
+                                            <frame key="frameInset" minX="235" minY="55" width="132" height="21"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                            <color key="textColor" red="0.81237026224102571" green="0.40200787731777959" blue="0.13776810351533442" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7Hu-JP-tRF">
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="35" translatesAutoresizingMaskIntoConstraints="NO" id="UEQ-Fm-92T">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="35"/>
+                                                    <color key="textColor" red="0.81237026224102571" green="0.58401944172205555" blue="0.0065462638456719163" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rce-J2-ZLw">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVD-pD-ab0">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZBW-TX-dFH" firstAttribute="trailing" secondItem="Y1D-uu-ewn" secondAttribute="trailingMargin" id="2Ue-zQ-W5O"/>
+                                        <constraint firstItem="7Hu-JP-tRF" firstAttribute="leading" secondItem="Y1D-uu-ewn" secondAttribute="leadingMargin" id="FSt-jM-kUh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7Hu-JP-tRF" secondAttribute="bottom" constant="-8.5" id="a4T-W9-30t"/>
+                                        <constraint firstItem="7Hu-JP-tRF" firstAttribute="top" secondItem="Y1D-uu-ewn" secondAttribute="topMargin" constant="-8" id="itt-j5-Spg"/>
+                                        <constraint firstItem="ZBW-TX-dFH" firstAttribute="top" secondItem="Y1D-uu-ewn" secondAttribute="topMargin" constant="47" id="sW3-ye-znm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="numberOfDaysFullOrbitLabel" destination="uVD-pD-ab0" id="SR6-2j-mma"/>
+                                    <outlet property="numberOfFacts" destination="ZBW-TX-dFH" id="LFi-d2-P5C"/>
+                                    <outlet property="numberOfMoonsLabel" destination="rce-J2-ZLw" id="WaI-ho-U2u"/>
+                                    <outlet property="planetNameLabel" destination="UEQ-Fm-92T" id="5V2-d3-4fz"/>
+                                    <segue destination="3vW-kk-h5z" kind="show" identifier="facts" id="hBG-pY-Exv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="v6q-Va-59T" id="6h1-qQ-lF4"/>
+                            <outlet property="delegate" destination="v6q-Va-59T" id="QV9-fQ-6VJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Planets" id="3fo-cW-qPf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEJ-iP-xdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368.80000000000001" y="-156.07196401799101"/>
+        </scene>
+        <!--Fact Table View Controller-->
+        <scene sceneID="7ma-CA-Oqt">
+            <objects>
+                <tableViewController id="3vW-kk-h5z" customClass="FactTableViewController" customModule="TableViewFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" id="S1T-gN-crJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FactCell" rowHeight="172" id="vlV-wV-m7G" customClass="FactTableViewCell" customModule="TableViewFinal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="172"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vlV-wV-m7G" id="Ofy-mk-Fdv">
+                                    <frame key="frameInset" width="375" height="171"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Earth was once believed to be the center of the universe." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wn9-q9-64H">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.68627450980000004" green="0.031372549020000001" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Wn9-q9-64H" firstAttribute="top" secondItem="Ofy-mk-Fdv" secondAttribute="top" id="6L9-qI-guX"/>
+                                        <constraint firstItem="Wn9-q9-64H" firstAttribute="leading" secondItem="Ofy-mk-Fdv" secondAttribute="leading" id="HLH-Bl-qqQ"/>
+                                        <constraint firstItem="Wn9-q9-64H" firstAttribute="centerY" secondItem="Ofy-mk-Fdv" secondAttribute="centerY" id="Ld0-LT-Nua"/>
+                                        <constraint firstItem="Wn9-q9-64H" firstAttribute="centerX" secondItem="Ofy-mk-Fdv" secondAttribute="centerX" id="ZsY-Hm-6p2"/>
+                                        <constraint firstAttribute="bottom" secondItem="Wn9-q9-64H" secondAttribute="bottom" id="r0y-hz-xM8"/>
+                                        <constraint firstAttribute="trailing" secondItem="Wn9-q9-64H" secondAttribute="trailing" id="sGn-Gb-JeB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="factTextView" destination="Wn9-q9-64H" id="XnK-rU-eR0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3vW-kk-h5z" id="wbX-8g-AVY"/>
+                            <outlet property="delegate" destination="3vW-kk-h5z" id="Yci-uf-BKh"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Kc-ID-4zF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119.2" y="-156.07196401799101"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vv9-NG-LZj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LVf-gV-sZs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rhz-bA-D8H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="v6q-Va-59T" kind="relationship" relationship="rootViewController" id="UAo-WQ-X0W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BW0-bV-cWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-436" y="-156.07196401799101"/>
+        </scene>
+    </scenes>
 </document>
